@@ -1,0 +1,135 @@
+/* ===== Basic Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===== Theme Variables ===== */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #212529;
+    --nav-bg: #007bff;
+    --nav-text: white;
+    --btn-bg: #28a745;
+    --btn-text: white;
+}
+
+body.dark {
+    --bg-color: #181818;
+    --text-color: #e0e0e0;
+    --nav-bg: #121212;
+    --nav-text: #e0e0e0;
+    --btn-bg: #1db954;
+    --btn-text: white;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+    background-color: var(--nav-bg);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .links a {
+    color: var(--nav-text);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav .links a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Theme Toggle Switch ===== */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ===== About Section ===== */
+.about {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    line-height: 1.6;
+}
